@@ -18,6 +18,9 @@ const routes: Routes = [
       import('./pages/register/register.module').then((m) => m.RegisterModule),
   },
   { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'menu', loadChildren: () => import('./pages/menu/menu.module').then(m => m.MenuModule) },
+  { path: 'add-platillo', loadChildren: () => import('./pages/add-platillo/add-platillo.module').then(m => m.AddPlatilloModule) },
+  { path: 'edit-platillo', loadChildren: () => import('./pages/edit-platillo/edit-platillo.module').then(m => m.EditPlatilloModule) },
 ];
 
 @NgModule({
