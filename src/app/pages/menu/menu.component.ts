@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public plates: Array<any> = [];
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    let list: any = localStorage.getItem('menu');
+    list = JSON.parse(list);
+    if(list) {
+      this.plates = list;
+    }
+    console.log(list)
+  }
+
+  addPlate() {
+    this.router.navigate(['/add-platillo']);
   }
 
 }

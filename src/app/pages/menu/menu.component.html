@@ -1,1 +1,35 @@
-<p>menu works!</p>
+<nav aria-label="breadcrumb" style="margin: 10px">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Menú</li>
+    </ol>
+</nav>
+<div class="card" style="margin: 10px">
+    <div class="row" style="margin: 10px">
+        <div class="col-12" style="display: flex; justify-content: space-between;">
+            <h3>Menú</h3>
+            <button (click)="addPlate()" class="btn btn-primary">Agregar platillo</button>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of plates; index as i">
+                    <td>{{i + 1}}</td>
+                    <td>{{p.nombre}}</td>
+                    <td>Q {{p.precio}}</td>
+                    <td><button class="btn btn-warning m-1">Editar</button><button class="btn btn-danger">Cancelar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
