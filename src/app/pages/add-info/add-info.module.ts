@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AddInfoRoutingModule } from './add-info-routing.module';
 import { AddInfoComponent } from './add-info.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { AddInfoComponent } from './add-info.component';
   ],
   imports: [
     CommonModule,
-    AddInfoRoutingModule
+    AddInfoRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AddInfoModule { }

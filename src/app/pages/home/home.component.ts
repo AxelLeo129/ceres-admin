@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   goInfo() {
-    this.router.navigate(['/info']);
+    this.router.navigate(['/add-info']);
   }
 
 }

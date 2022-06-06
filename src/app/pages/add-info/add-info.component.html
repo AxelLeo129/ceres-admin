@@ -8,16 +8,11 @@
     <div class="col-12">
         <div class="card" style="margin: 10px;">
             <div class="card-body">
-                <form (ngSubmit)="save()">
+                <form [formGroup]="form" (ngSubmit)="save()">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nombre</label>
                         <input type="text" formControlName="nombre" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp" placeholder="Nombre">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Ubicación</label>
-                        <textarea class="form-control" formControlName="ubicacion" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="Ubicación"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Hora Apertura</label>
@@ -31,16 +26,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Telefono</label>
-                        <input type="tel" formControlName="Telefono" class="form-control" id="exampleInputEmail1"
+                        <input type="tel" formControlName="telefono" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp" placeholder="+502-1234-5678"
                             pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Cantidad de platillos</label>
-                        <input type="number" formControlName="Platillos" class="form-control" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" placeholder="">
-                    </div>
-                    <button type="button" class="btn btn-secondary m-1">Regresar</button>
+                    <button type="button" class="btn btn-secondary m-1" (click)="getHome()">Regresar</button>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                 </form>
             </div>

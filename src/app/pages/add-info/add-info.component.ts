@@ -17,20 +17,25 @@ export class AddInfoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    let user: any = localStorage.getItem('user');
+    user = JSON.parse(user);
+    this.form.patchValue({ nombre: user.nombre1, horaApertura: user.apertura, horaCierre: user.cierre, telefono: user.telefono });
   }
 
   createForm() {
     return new FormGroup({
       nombre: new FormControl('', [Validators.required]),
-      ubicacion: new FormControl('', [Validators.required]),
       horaApertura: new FormControl('', [Validators.required]),
       horaCierre: new FormControl('', [Validators.required]),
-      telefono: new FormControl('', [Validators.required]),
-      platillos: new FormControl('', [Validators.required])
+      telefono: new FormControl('', [Validators.required])
     });
   }
 
   save(){}
+
+  getHome() {
+    this.router.navigate(['/home']);
+  }
 
   get nombre() {
     return this.form.get('nombre');
