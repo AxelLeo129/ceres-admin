@@ -1,22 +1,47 @@
 <nav aria-label="breadcrumb" style="margin: 10px">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Opciones</li>
+        <li class="breadcrumb-item"><a href="#">Login</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+        <li class="breadcrumb-item"><a href="/menu">Menú</a></li>
     </ol>
 </nav>
 <div class="card" style="margin: 10px">
     <div class="card-body">
         <div class="jumbotron">
-            <h1 class="display-4">Inicio</h1>
-            <p class="lead">Bienvenido a CERES, aquí puedes administrar tu restaurte, con todo lo necesario para trabajar en CERES.</p>
+            <div class="container">
+                <div class="icon">
+                    <svg enable-background="new 0 0 300 302.5" version="1.1" viewBox="0 0 300 302.5"
+                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                    </svg>
+                </div>
+                <div class="title">
+                    <h1 class="display-4">¡Bienvenido a <span>C E R E S</span>!</h1>
+                </div>
+            </div>
+            <p class="lead">Aquí tienes todo para podes administrar tu restaurante.</p>
             <hr class="my-4">
-            <p>Selecciona la opción a realizar.</p>
         </div>
         <div class="row">
-            <div class="col">
-                <div class="alert alert-success" (click)="go()" role="alert">
+            <div class="col-12">
+                <p class="text">Comienza con lo que quieras:</p>
+            </div>
+            <div class="boton col-6">
+                <button (click)="go()" class="btn btn-primary">Menús</button>
+            </div>
+            <div class="boton col-6">
+                <button (click)="go()" class="btn btn-primary">Info</button>
+            </div>
+            <div class="col-6">
+                <div class="alert alert-primary" role="alert">
                     <h4 class="alert-heading">Menús</h4>
                     <p>Administra el menú de tu restaurante</p>
+                    <hr>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="alert alert-primary" role="alert">
+                    <h4 class="alert-heading">Información del Restaurante</h4>
+                    <p>Administra la información que se mostrará de tu restaurante</p>
                     <hr>
                 </div>
             </div>

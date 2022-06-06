@@ -1,0 +1,29 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
+.btn{
+    font-size: small;
+    border-radius: 45px;
+}
+.btn-primary{
+    background-color: rgba(129, 230, 108, 0.9176470588);
+    color: black;
+    border-color: rgba(129, 230, 108, 0.9176470588);
+}
+.col-12{
+    padding-left: 50%;
+}
+h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+th, td{
+    text-align: center;
+}
+td{
+    font-size: medium;
+}
+.btn-warning{
+    margin-right: 15px !important;
+}
