@@ -2,29 +2,31 @@
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Login</a></li>
         <li class="breadcrumb-item"><a href="/home">Inicio</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Menú</li>
-        <li class="breadcrumb-item"><a href="/info">Información</a></li>
+        <li class="breadcrumb-item"><a href="/menu">Menú</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Información</li>
     </ol>
 </nav>
 <div class="card" style="margin: 10px">
     <div class="row" style="margin: 10px">
         <div class="col-12" style="display: flex; justify-content: space-between;">
-            <h3>Menú</h3>
-            <button (click)="addPlate()" class="btn btn-primary">Agregar platillo</button>
+            <h3>Información del Restaurante</h3>
+            <button (click)="editInfo()" class="btn btn-primary">Agregar Detalles</button>
         </div>
     </div>
     <div class="card-body">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Nombre</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Acciones</th>
+                    <th scope="col">Ubicación</th>
+                    <th scope="col">Hora de Apertura</th>
+                    <th scope="col">Hora de Cierre</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Platillos</th>
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let p of plates; index as i">
+                <tr *ngFor="let p of info; index as i">
                     <td>{{i + 1}}</td>
                     <td>{{p.nombre}}</td>
                     <td>Q {{p.precio}}</td>

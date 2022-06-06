@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/menu']);
   }
 
+  goInfo() {
+    this.router.navigate(['/info']);
+  }
+
 }

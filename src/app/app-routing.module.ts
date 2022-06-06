@@ -21,6 +21,9 @@ const routes: Routes = [
   { path: 'menu', loadChildren: () => import('./pages/menu/menu.module').then(m => m.MenuModule) },
   { path: 'add-platillo', loadChildren: () => import('./pages/add-platillo/add-platillo.module').then(m => m.AddPlatilloModule) },
   { path: 'edit-platillo', loadChildren: () => import('./pages/edit-platillo/edit-platillo.module').then(m => m.EditPlatilloModule) },
+  { path: 'info', loadChildren: () => import('./pages/info/info.module').then(m => m.InfoModule) },
+  { path: 'add-info', loadChildren: () => import('./pages/add-info/add-info.module').then(m => m.AddInfoModule) },
+  { path: 'edit-info', loadChildren: () => import('./pages/edit-info/edit-info.module').then(m => m.EditInfoModule) },
 ];
 
 @NgModule({
